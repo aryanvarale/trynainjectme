@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism Login Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="card">
+            <div class="card-body">
+                <form action="login.php" method="post">
+                    <h2>Welcome</h2>
+                    <div class="input-box">
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <a href="forgot.html">
+                        <p>Forgot password</p>
+                    </a>
+                    <button type="submit">
+                        <h2>Login</h2>
+                    </button>
+                    <a href="#">
+                        <p>Don't have an account? Sign up here</p>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script>
+    // Check for error message in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const errorMessage = urlParams.get('error');
+    console.log("Error Message from URL:", errorMessage); // Debug log
+    if (errorMessage) {
+        alert(decodeURIComponent(errorMessage));
+    }
+</script>
+
+</body>
+
+</html>
